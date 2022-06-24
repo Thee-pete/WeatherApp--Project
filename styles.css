@@ -65,15 +65,24 @@ form button{
 }
 .weatherCard {
     background-color: white;
-    height: 400px;
+    height: auto;
     width: 25%;
     margin-left: 200px;
-    opacity: 50%;
+    opacity: 70%;
     border-radius: 10px;
+}
+.weatherCard h5 {
+    text-align: center;
+    margin-top: 10px;
+}
+.weatherCard img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
 }
 .favoritesCard{
     background-color: white;
-    height: 400px;
+    height: auto;
     width: 25%;
     margin-right: 200px;
     opacity: 50%;
