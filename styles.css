@@ -1,0 +1,40 @@
+body {
+
+    background-color: black;
+   
+    
+}
+
+.mainContainer {
+    background-color: black;
+    text-align: center;
+    width: 100%;
+
+}
+.mainContainer h1{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+.contentContainer{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.weatherCard {
+    background-color: white;
+    height: 400px;
+    width: 300px;
+    margin-left: 200px;
+}
+.favoritesCard{
+    background-color: white;
+    height: 400px;
+    width: 300px;
+    margin-right: 200px;
+ 
+}
+.footer{
+    background-color: black;
+}
