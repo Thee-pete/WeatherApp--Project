@@ -2,15 +2,14 @@ body {
 
     background-image: url(./assests/background.jpg); 
     background-size: cover;  
- 
-   
-    
+    background-blend-mode: darken;
+  
 }
 
 .mainContainer {
     text-align: center;
     width: 100%;
-    margin-top:30px ;
+    margin-top:20px ;
 
 }
 .mainContainer h1{
@@ -23,7 +22,7 @@ body {
      display: flex;
      align-items: center;
      justify-content: center;
-     margin-top: 30px;
+     margin-top: 20px;
      
    
 }
@@ -91,7 +90,7 @@ form button{
     height: auto;
     width: 25%;
     margin-right: 200px;
-    opacity: 50%;
+    opacity: 70%;
     border-radius: 10px;
     text-align: center;
 
@@ -100,6 +99,20 @@ form button{
     text-align: center;
     margin-top: 10px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    height: 40px;
+    background: rgb(231, 231, 231);
+    margin-top:2px;
+    border-radius: 5px;
+  }
 .footer{
     height: 28px;
     align-items: center;
