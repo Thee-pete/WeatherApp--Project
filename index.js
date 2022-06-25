@@ -72,7 +72,6 @@ function loadFavourites(){
     fetch('http://localhost:3000/favorites')
     .then(resp => resp.json())
     .then(data => {
-
       
        for(let i = 0; i < data.length; i++)
        {
