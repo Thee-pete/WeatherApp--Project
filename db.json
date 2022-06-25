@@ -11,6 +11,10 @@
     {
       "cityName": "Cape Town",
       "id": 3
+    },
+    {
+      "cityName": "Lagos",
+      "id": 4
     }
   ]
 }

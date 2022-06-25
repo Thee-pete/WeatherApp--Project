@@ -1,19 +1,35 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    getWeather();
+    getCityInput();
     loadFavourites();
     addToFavorites();
   
 });
 
-let key = 'e7d25d8c1d14be6b058717f22a1b77ea';
-let city = 'Cape Town';
-let units = 'Metric';
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
+
 let favList = document.getElementById('favoritesList');
 console.log(favList);
 
-function getWeather(){
-    fetch(url)
+
+function getCityInput(){
+
+   let inputForm =  document.querySelector('#searchForm');
+   let searchInput = document.querySelector('#searchInput')
+   inputForm.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        cityInput = searchInput.value;
+        console.log(cityInput)
+        getWeather(`${cityInput}`);
+
+
+    })
+     
+}
+
+function getWeather(city){
+    let key = 'e7d25d8c1d14be6b058717f22a1b77ea';
+    let units = 'Metric';
+
+     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`)
     .then(resp => {
         if(!resp.ok){
             console.log(resp.statusText);
@@ -46,7 +62,6 @@ function displayWeather(details){
 
 function addToFavorites(){
    
-
     document.getElementById('favoriteBtn').addEventListener('click' ,() => {
         //add city name to favorites list
         let favouriteName = document.getElementById('cityName');
@@ -56,7 +71,7 @@ function addToFavorites(){
 
         let newCityFav = newFav.textContent;
 
-        fetch('http://localhost:3000/favorites', {
+         fetch('http://localhost:3000/favorites', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -69,7 +84,7 @@ function addToFavorites(){
        });
 }
 function loadFavourites(){
-    fetch('http://localhost:3000/favorites')
+     fetch('http://localhost:3000/favorites')
     .then(resp => resp.json())
     .then(data => {
       
