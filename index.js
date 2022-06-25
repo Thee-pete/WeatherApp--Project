@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 let key = 'e7d25d8c1d14be6b058717f22a1b77ea';
-let city = 'Nairobi';
+let city = 'Cape Town';
 let units = 'Metric';
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`;
 

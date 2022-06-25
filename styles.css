@@ -67,7 +67,7 @@ form button{
     height: auto;
     width: 25%;
     margin-left: 200px;
-    opacity: 70%;
+    opacity: 90%;
     border-radius: 10px;
 }
 .weatherCard h5 {
@@ -90,7 +90,7 @@ form button{
     height: auto;
     width: 25%;
     margin-right: 200px;
-    opacity: 70%;
+    opacity: 90%;
     border-radius: 10px;
     text-align: center;
 
