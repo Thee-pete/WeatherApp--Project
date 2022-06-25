@@ -1,0 +1,16 @@
+{
+  "favorites": [
+    {
+      "id": 1,
+      "cityName": "Nairobi"
+    },
+    {
+      "cityName": "Cape Town",
+      "id": 2
+    },
+    {
+      "cityName": "Cape Town",
+      "id": 3
+    }
+  ]
+}
