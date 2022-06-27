@@ -118,6 +118,7 @@ ul {
 .footer{
     height: 28px;
     align-items: center;
+    margin-bottom: 10px;
 }
 .footer p{
     color: #fff;
