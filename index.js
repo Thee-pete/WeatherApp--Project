@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 let favList = document.getElementById('favoritesList');
 console.log(favList);
+let favoriteBtn = document.getElementById('favoriteBtn');
 
 
 function getCityInput(){
@@ -86,8 +87,11 @@ function displayWeather(details){
 
 function addToFavorites(){
 
-   let favoriteBtn = document.getElementById('favoriteBtn');
+   
    favoriteBtn.addEventListener('click' ,() => {
+
+    checkFavorites();
+     
         //add city name to favorites list
         let favouriteName = document.getElementById('cityName');
         let newFav = document.createElement('li');
@@ -96,6 +100,7 @@ function addToFavorites(){
 
 
         let newCityFav = newFav.textContent;
+        favoriteBtn.src = "./assets/heart.png";
 
          fetch('http://localhost:3000/favorites', {
             method: 'POST',
@@ -104,21 +109,37 @@ function addToFavorites(){
             },
             body: JSON.stringify({
                 cityName: `${newCityFav}`,
+                imageSrc: `${favoriteBtn.src}`
             } ),
         });
+
+        
         
 
        });
 
 }
-function checkIfFavorite(){
-    fetch('http://localhost:3000/favorites')
-    .then(resp => resp.json())
-    .then(data => {
-      
-     
+function checkFavorites(){
+let nameOfCity = document.getElementById('cityName').textContent;
+fetch('http://localhost:3000/favorites')
+.then(resp => resp.json())
+.then(data => {
+  
+   for(let i = 0; i < data.length; i++)
+   {
+      if(data[i].cityName == nameOfCity){
 
-    })
+        alert("This city is already added to your favorites")
+        break;
+
+      }else{
+        addToFavorites()
+      }
+    
+   }
+
+})
+    
 }
 function loadFavourites(){
      fetch('http://localhost:3000/favorites')
@@ -137,7 +158,7 @@ function loadFavourites(){
 }
 
 function updateSearchWithList(){
-    //let favListItems = document.querySelectorAll('li');
+    
     document.getElementById("favoritesList").addEventListener("click",function(e) {
         if(e.target && e.target.nodeName == "LI") {
             console.log(e.target.id + " was clicked");
