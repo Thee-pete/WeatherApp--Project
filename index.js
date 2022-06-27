@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     getCityInput();
     loadFavourites();
     addToFavorites();
+    updateSearchWithList();
+    
   
 });
 
@@ -121,10 +123,14 @@ function loadFavourites(){
     })
 }
 function updateSearchWithList(){
-    let favListItems = document.querySelectorAll('li');
-    for (let i = 0; i < favListItems.Count; i++) {
-        Console.log(favListItems[i]);
-    }
+    //let favListItems = document.querySelectorAll('li');
+    document.getElementById("favoritesList").addEventListener("click",function(e) {
+        if(e.target && e.target.nodeName == "LI") {
+            console.log(e.target.id + " was clicked");
+            
+            getWeather(e.target.innerText);
+        }
+    });
   
 
 }
