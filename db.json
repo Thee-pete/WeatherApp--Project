@@ -7,6 +7,10 @@
     {
       "cityName": "London",
       "id": 2
+    },
+    {
+      "cityName": "Cape Town",
+      "id": 3
     }
   ]
 }

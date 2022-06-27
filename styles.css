@@ -116,9 +116,10 @@ ul {
     border-radius: 5px;
   }
 .footer{
-    height: 28px;
+    height: 40px;
     align-items: center;
     margin-bottom: 10px;
+   
 }
 .footer p{
     color: #fff;
