@@ -11,6 +11,61 @@
     {
       "cityName": "Cape Town",
       "id": 3
+    },
+    {
+      "cityName": "London",
+      "imageSrc": "http://127.0.0.1:5500/assets/heart.png",
+      "id": 4
+    },
+    {
+      "cityName": "Vatican City",
+      "imageSrc": "http://127.0.0.1:5500/assets/heart.png",
+      "id": 5
+    },
+    {
+      "cityName": "London",
+      "imageSrc": "http://127.0.0.1:5500/assets/heart.png",
+      "id": 6
+    },
+    {
+      "cityName": "Cape Town",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 7
+    },
+    {
+      "cityName": "Kenya",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 8
+    },
+    {
+      "cityName": "Kenya",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 9
+    },
+    {
+      "cityName": "Kenya",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 10
+    },
+    {
+      "cityName": "Kenya",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 11
+    },
+    {
+      "cityName": "Kenya",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 12
+    },
+    {
+      "cityName": "Kenya",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 13
+    },
+    {
+      "cityName": "Kenya",
+      "imageSrc": "https://thee-pete.github.io/WeatherApp--Project/assets/heart.png",
+      "id": 14
     }
   ]
 }

@@ -90,7 +90,7 @@ function addToFavorites(){
    
    favoriteBtn.addEventListener('click' ,() => {
 
-    checkFavorites();
+   // checkFavorites();
      
         //add city name to favorites list
         let favouriteName = document.getElementById('cityName');
@@ -119,7 +119,7 @@ function addToFavorites(){
        });
 
 }
-function checkFavorites(){
+/*function checkFavorites(){
 let nameOfCity = document.getElementById('cityName').textContent;
 fetch('http://localhost:3000/favorites')
 .then(resp => resp.json())
@@ -140,7 +140,7 @@ fetch('http://localhost:3000/favorites')
 
 })
     
-}
+}*/
 function loadFavourites(){
      fetch('http://localhost:3000/favorites')
     .then(resp => resp.json())
