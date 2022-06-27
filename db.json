@@ -15,6 +15,22 @@
     {
       "cityName": "Lagos",
       "id": 4
+    },
+    {
+      "cityName": "Kampala",
+      "id": 5
+    },
+    {
+      "cityName": " London",
+      "id": 6
+    },
+    {
+      "cityName": "London",
+      "id": 7
+    },
+    {
+      "cityName": "Nairobi",
+      "id": 8
     }
   ]
 }

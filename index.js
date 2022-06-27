@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    let key = 'e7d25d8c1d14be6b058717f22a1b77ea';
+    let units = 'Metric';
+    let city = 'Nairobi'
+
+     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=${units}`)
+    .then(resp => {
+        if(!resp.ok){
+            console.log(resp.statusText);
+        }else{
+            return resp.json();
+        }
+    })
+    .then(data => {
+        console.log(data)
+        displayWeather(data);
+    })
+    .catch(error => console.log(error));
+
+
     getCityInput();
     loadFavourites();
     addToFavorites();
@@ -11,21 +30,24 @@ console.log(favList);
 
 
 function getCityInput(){
-
+  
    let inputForm =  document.querySelector('#searchForm');
    let searchInput = document.querySelector('#searchInput')
    inputForm.addEventListener('submit', (e) =>{
         e.preventDefault();
+
         cityInput = searchInput.value;
         console.log(cityInput)
         getWeather(`${cityInput}`);
 
 
     })
+    
      
 }
 
 function getWeather(city){
+  
     let key = 'e7d25d8c1d14be6b058717f22a1b77ea';
     let units = 'Metric';
 
@@ -98,3 +120,12 @@ function loadFavourites(){
 
     })
 }
+function updateSearchWithList(){
+    let favListItems = document.querySelectorAll('li');
+    for (let i = 0; i < favListItems.Count; i++) {
+        Console.log(favListItems[i]);
+    }
+  
+
+}
+
