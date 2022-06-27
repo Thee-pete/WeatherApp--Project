@@ -13,7 +13,7 @@ You will need a web browser:
 - Chrome
 - Mozilla FireFox
 
-You will also need to run json-server so that the favorites list can have persistence.
+You will also need to run json-server so that the favorites list can have persistence. Use this command: json-server --watch db.json
 
 ### Live Link
 
