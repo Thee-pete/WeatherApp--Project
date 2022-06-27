@@ -100,7 +100,7 @@ function addToFavorites(){
 
 
         let newCityFav = newFav.textContent;
-        favoriteBtn.src = "./assets/heart.png";
+        //favoriteBtn.src = "./assets/heart.png";
 
          fetch('http://localhost:3000/favorites', {
             method: 'POST',
@@ -109,7 +109,7 @@ function addToFavorites(){
             },
             body: JSON.stringify({
                 cityName: `${newCityFav}`,
-                imageSrc: `${favoriteBtn.src}`
+                
             } ),
         });
 
