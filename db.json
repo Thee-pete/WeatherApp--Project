@@ -13,13 +13,16 @@
       "id": 3
     },
     {
-      "cityName": "Lagos",
+      "cityName": "Nairobi",
       "id": 4
     },
     {
-      "cityName": "Kampala",
+      "cityName": "Nairobi",
       "id": 5
+    },
+    {
+      "cityName": "Nairobi",
+      "id": 6
     }
- 
   ]
 }

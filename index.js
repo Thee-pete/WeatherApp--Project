@@ -85,13 +85,15 @@ function displayWeather(details){
 }
 
 function addToFavorites(){
-   
-    document.getElementById('favoriteBtn').addEventListener('click' ,() => {
+
+   let favoriteBtn = document.getElementById('favoriteBtn');
+   favoriteBtn.addEventListener('click' ,() => {
         //add city name to favorites list
         let favouriteName = document.getElementById('cityName');
         let newFav = document.createElement('li');
         newFav.appendChild(document.createTextNode(favouriteName.textContent));
         favList.appendChild(newFav);
+
 
         let newCityFav = newFav.textContent;
 
@@ -104,8 +106,19 @@ function addToFavorites(){
                 cityName: `${newCityFav}`,
             } ),
         });
+        
 
        });
+
+}
+function checkIfFavorite(){
+    fetch('http://localhost:3000/favorites')
+    .then(resp => resp.json())
+    .then(data => {
+      
+     
+
+    })
 }
 function loadFavourites(){
      fetch('http://localhost:3000/favorites')
@@ -122,6 +135,7 @@ function loadFavourites(){
 
     })
 }
+
 function updateSearchWithList(){
     //let favListItems = document.querySelectorAll('li');
     document.getElementById("favoritesList").addEventListener("click",function(e) {
