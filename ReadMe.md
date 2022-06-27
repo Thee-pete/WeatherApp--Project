@@ -1,4 +1,4 @@
-# BULTECH PORTFOLIO WEBSITE
+# CURRENT WEATHER WEB APP
 
 This is a simple weather app that gets the current weather using city names. It gets weather information by utilising the OpenWeatherMap API.
 You can also add cities to your favorites list for easier access to the current weather in the cities.
