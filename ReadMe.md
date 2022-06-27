@@ -1,17 +1,19 @@
 # CURRENT WEATHER WEB APP
 
 This is a simple weather app that gets the current weather using city names. It gets weather information by utilising the OpenWeatherMap API.
-You can also add cities to your favorites list for easier access to the current weather in the cities.
+You can also add cities to your favorites list and click on them for easier access to their current weather.
 
 ## Getting started
 
-These instructions will get you a copy of the project up and running on your local machine for testing purposes.
+These instructions will help you get the weather app up and running.
 
 ### Prerequisites
 
 You will need a web browser:
 - Chrome
 - Mozilla FireFox
+
+You will also need to run json-server so that the favorites list can have persistence.
 
 ### Live Link
 
