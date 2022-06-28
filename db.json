@@ -1,18 +1,6 @@
 {
   "favorites": [
     {
-      "id": 1,
-      "cityName": "Nairobi"
-    },
-    {
-      "cityName": "London",
-      "id": 2
-    },
-    {
-      "cityName": "Cape Town",
-      "id": 3
-    },
-    {
       "cityName": "Nairobi",
       "imageSrc": "http://127.0.0.1:5500/assets/heart.png",
       "id": 4
