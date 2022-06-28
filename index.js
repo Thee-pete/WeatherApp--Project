@@ -45,6 +45,8 @@ function getCityInput(){
         console.log(cityInput)
         getWeather(`${cityInput}`);
 
+        cityInput='';
+
 
     })
     
@@ -137,7 +139,7 @@ function loadFavourites(){
     })
 }
 
-//USING THE CITIES IN THE LIST TO GET WEATHER
+//USING THE CITIES IN THE FAVORITES LIST TO GET WEATHER
 function updateSearchWithList(){
     
     document.getElementById("favoritesList").addEventListener("click",function(e) {
