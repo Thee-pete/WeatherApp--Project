@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+
+    //DEFAULT FETCH OF NAIROBI WEATHER
     let key = 'e7d25d8c1d14be6b058717f22a1b77ea';
     let units = 'Metric';
     let city = 'Nairobi'
@@ -17,7 +19,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     })
     .catch(error => console.log(error));
 
-
+//CALLING FUNCTIONS
     getCityInput();
     loadFavourites();
     addToFavorites();
@@ -31,7 +33,7 @@ let favList = document.getElementById('favoritesList');
 console.log(favList);
 let favoriteBtn = document.getElementById('favoriteBtn');
 
-
+//GETTING THE INPUT FROM SEARCHBAR
 function getCityInput(){
   
    let inputForm =  document.querySelector('#searchForm');
@@ -48,7 +50,7 @@ function getCityInput(){
     
      
 }
-
+//GET WEATHER FROM OPENWEATHERAPP API
 function getWeather(city){
   
     let key = 'e7d25d8c1d14be6b058717f22a1b77ea';
@@ -68,6 +70,8 @@ function getWeather(city){
     })
     .catch(error => console.log(error));
 }
+
+//DISPLAYING WEATHER DETAILS IN THE WEATHER CARD
 function displayWeather(details){
 
     document.getElementById('cityName').textContent = details.name;
@@ -85,14 +89,11 @@ function displayWeather(details){
 
 }
 
+//ADDING CITY TO FAVORITES LIST
 function addToFavorites(){
-
-   
+ 
    favoriteBtn.addEventListener('click' ,() => {
 
-   // checkFavorites();
-     
-        //add city name to favorites list
         let favouriteName = document.getElementById('cityName');
         let newFav = document.createElement('li');
         newFav.appendChild(document.createTextNode(favouriteName.textContent));
@@ -100,8 +101,6 @@ function addToFavorites(){
 
 
         let newCityFav = newFav.textContent;
-        //favoriteBtn.src = "./assets/heart.png";
-
          fetch('http://localhost:3000/favorites', {
             method: 'POST',
             headers: {
@@ -119,28 +118,9 @@ function addToFavorites(){
        });
 
 }
-/*function checkFavorites(){
-let nameOfCity = document.getElementById('cityName').textContent;
-fetch('http://localhost:3000/favorites')
-.then(resp => resp.json())
-.then(data => {
-  
-   for(let i = 0; i < data.length; i++)
-   {
-      if(data[i].cityName == nameOfCity){
 
-        alert("This city is already added to your favorites")
-        break;
 
-      }else{
-        addToFavorites()
-      }
-    
-   }
-
-})
-    
-}*/
+//LOADING FAVORITES CITIES IN THE LIST
 function loadFavourites(){
      fetch('http://localhost:3000/favorites')
     .then(resp => resp.json())
@@ -157,12 +137,11 @@ function loadFavourites(){
     })
 }
 
+//USING THE CITIES IN THE LIST TO GET WEATHER
 function updateSearchWithList(){
     
     document.getElementById("favoritesList").addEventListener("click",function(e) {
         if(e.target && e.target.nodeName == "LI") {
-            console.log(e.target.id + " was clicked");
-            
             getWeather(e.target.innerText);
         }
     });

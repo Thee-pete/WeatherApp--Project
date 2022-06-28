@@ -21,14 +21,6 @@
       "cityName": "London",
       "imageSrc": "http://127.0.0.1:5500/assets/favorite.png",
       "id": 5
-    },
-    {
-      "cityName": "Nairobi",
-      "id": 6
-    },
-    {
-      "cityName": "London",
-      "id": 7
     }
   ]
 }
